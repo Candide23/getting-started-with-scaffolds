@@ -3,7 +3,7 @@
     <h1>
       List of all movies
     </h1>
-      <a href="/movies/new">Add a new movie</a>
+    <a href="/movies/new">New movie</a>
   </div>
 </div>
 
@@ -11,13 +11,12 @@
 
 <div>
   <div>
-    <!--<h2>
+    <h2>
       Add a new movie
     </h2>
 
-    <form action="/movies" method="post" data-turbo="false">
-      <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">
-
+    <form action="/movies" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
       <div>
         <label for="title_box">
           Title
@@ -31,23 +30,23 @@
           Description
         </label>
 
-        <textarea id="description_box" name="query_description" rows="3"></textarea>
+        <input type="text" id="description_box" name="query_description">
       </div>
 
       <div>
-        <input type="checkbox" id="released_box" name="query_released" value="1">
+        <label for="released_box">
+          Released
+        </label>
 
-        <label for="released_box">Released</label>
+        <input type="text" id="released_box" name="query_released">
       </div>
- 
+
       <button>
         Create movie
       </button>
-    </form>-->
+    </form>
   </div>
 </div>
-
-<a href="/movies/new">Add a new movie</a>
 
 <hr>
 <div>

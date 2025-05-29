@@ -3,11 +3,9 @@
 </h2>
 
 <form action="/movies/<%= @the_movie.id %>" method="post" data-turbo="false">
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" >
-  <!--  rails is specifically looking for a parameter that has the name _method -->
-  <input type="hidden" name="_method" value="patch">
 
-  <div>
+ <input type="hidden" name="_method" value="patch">
+<div>
     <label for="title_box">
       Title
     </label>

@@ -2,15 +2,16 @@
   Add a new movie
 </h2>
 
-<form action="/movies" method="post" data-turbo="false">
+<form action="/movies" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 
-  <div>
+  <!-- ... -->
+<div>
     <label for="title_box">
       Title
     </label>
 
-    <input type="text" id="title_box" name="query_title">
+    <input type="text" id="title_box" name="query_title" value="<%= @the_movie.title %>">
   </div>
 
   <div>
@@ -18,7 +19,7 @@
       Description
     </label>
 
-    <textarea id="description_box" name="query_description" rows="3"></textarea>
+    <textarea id="description_box" name="query_description" rows="3"><%= @the_movie.description %></textarea>
   </div>
 
   <div>
@@ -27,7 +28,7 @@
     <label for="released_box">Released</label>
   </div>
 
- <button>
-    Create movie
+  <button>
+    Create Movie
   </button>
 </form>

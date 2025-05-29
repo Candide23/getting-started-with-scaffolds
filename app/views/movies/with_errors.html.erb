@@ -1,15 +1,17 @@
-
+<%= @the_movie.inspect %>
+<%#= @the_movie.errors.full_messages.to_sentence %>
 
 <h2>
   Add a new movie
 </h2>
 
-<% @the_movie.errors.full_messages.each do |msg| %>
-  <li><%= msg %></li>
-<% end %>
+<%# @the_movie.errors.full_messages.each do |msg| %>
+<!--  <li><%#= msg %></li>-->
+<%# end %>
 
-<form action="/movies" method="post" data-turbo="false">
+<form action="/movies" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
   <div>
     <label for="title_box">
       Title
@@ -33,6 +35,6 @@
   </div>
 
   <button>
-    Create movie
+    Create Movie
   </button>
 </form>
